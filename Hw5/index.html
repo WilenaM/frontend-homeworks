@@ -1,39 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width= , initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    <div>
-        <form action="https://localhost/test/qqq/index.php" mathod="post" target="_blank">
-            <input type="text" name="name">
-            <br>
-            <input  type="email" name="email">
-            <label>
-                <input type="checkbox" name="skille[]" value="HtML"> HTML
-            </label>
-            <label>
-                <input type="checkbox" name="skille[]" value="CSS">CSS
-            </label>
-            <label>
-                <input type="checkbox" name="skille[]" value="JS">JS
-            </label>
-            <br>
-            <select name="skills2[]" multiple>
-                <option value="html">HTML</option>
-                <option value="css">CSS</option>
-                <option value="js">JS</option>
-            </select>
 
+    <link href="index.css" rel="stylesheet"/>
+
+</head>
+
+<body >
+    <main>
+        <form action="/">
+            <label for="name">Ваше ім'я:</label>
+            <input type="text" id="name" required placeholder="Please entrer your name...">
             <br>
-            <textarea name="comment" cols="35" rows="3">lorem </textarea>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Please enter your @...">
             <br>
-             
-            <button type="submit">Search</button>
+            <label for="password">Пороль</label>
+            <input type="password" id="password" placeholder="Please enter your password...">
+            <br>
+            <label for="password">Пороль ще раз</label> <!--zaputatu za for-->
+            <input type="password" id="email" placeholder="Please repit your password...">
+            <br>
+
+            <span>Стать</span>
+            <label>
+                <input type="radio" name="gender" value="чоловіча">чоловіча
+            </label>
+            <label>
+                <input type="radio" name="gender" value="жіноча">жіноча
+            </label>
+            <br>
+            <label for="age">Вік</label>
+            <input type="number" id="age" placeholder="">
+            <br>
+            <label for="course">Курс
+
+                <select name="course[]" aria-placeholder="Оберіть курс">
+                    <option value="" disabled selected>-=Оберіть курс=-</option>
+                    <option value="Front-End">Front-End</option>
+                    <option value="Back-End">Back-End</option>
+                    <option value="Project Management">Project Management</option>
+                    <option value="QA Manual">QA Manual</option>
+                </select>
+            </label>
+            <br>
+            <label for="Адреса">Адреса</label>
+            <textarea name="comment" cols="35" rows="3" placeholder="Країна" textarea></textarea>
+            <br>
+
+
+            <input type="checkbox" id="aggreement" name="aggreement[]" value=true>
+            <label for="aggreement">Я погоджуюсь з обробкою персональних даних</label>
+            <br>
+            <button type="reset">Очистити форму</button>
+            <button type="submit">Зареєструватися</button>
         </form>
-    </div>
+    </main>
+
+
 </body>
+
 </html>
