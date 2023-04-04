@@ -13,18 +13,18 @@
 
 <body >
     <main>
-        <form action="/">
+        <form action="/" method="post">
             <label for="name">Ваше ім'я:</label>
-            <input type="text" id="name" required placeholder="Please entrer your name...">
+            <input type="text" id="name" required placeholder="Please entrer your name..." name="name">
             <br>
             <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Please enter your @...">
+            <input type="email" id="email" placeholder="Please enter your @..." name="email">
             <br>
             <label for="password">Пороль</label>
-            <input type="password" id="password" placeholder="Please enter your password...">
+            <input type="password" id="password" placeholder="Please enter your password..." name="password">
             <br>
-            <label for="password">Пороль ще раз</label> <!--zaputatu za for-->
-            <input type="password" id="password" placeholder="Please repit your password...">
+            <label for="password">Пороль ще раз</label>
+            <input type="password" id="password-repit" placeholder="Please repit your password..." name="password-repit">
             <br>
 
             <span>Стать</span>
@@ -40,7 +40,7 @@
             <br>
             <label for="course">Курс
 
-                <select name="course[]" aria-placeholder="Оберіть курс">
+                <select name="course" aria-placeholder="Оберіть курс">
                     <option value="" disabled selected>-=Оберіть курс=-</option>
                     <option value="Front-End">Front-End</option>
                     <option value="Back-End">Back-End</option>
@@ -54,7 +54,7 @@
             <br>
 
 
-            <input type="checkbox" id="aggreement" name="aggreement[]" value=true>
+            <input type="checkbox" id="aggreement" name="aggreement" value=true>
             <label for="aggreement">Я погоджуюсь з обробкою персональних даних</label>
             <br>
             <button type="reset">Очистити форму</button>
