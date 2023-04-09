@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #3b3f45;
+  font-family: "Roboto", sans-serif;
+}
+
+#header {
+  background-color: #4a4f56;
+  color: #ff8984;
+  text-align: center;
+  padding-top: 19px;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 4px;
+}
+
+#header p {
+  font-size: 16px;
+  line-height: 18.75px;
+  padding-bottom: 12px;
+}
+
+main {
+  padding-top: 20px;
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 45px;
+}
+
+li {
+  color: #ffffff;
+  position: relative;
+}
+
+.checkbox-wrap {
+  padding-top: 11px;
+  padding-bottom: 13px;
+}
+
+li:nth-of-type(odd) {
+  background-color: #88839e;
+}
+
+li:nth-of-type(even) {
+  background-color: #625e77;
+}
+
+li:hover .checkbox-wrap {
+  border-top: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  padding-top: 8px;
+  padding-bottom: 10px;
+}
+
+.container {
+  width: min(90%, 534px);
+  margin: 0 auto;
+}
+
+.checkbox-wrap {
+}
+
+li input[type="checkbox"] + label {
+  font-size: 18px;
+  line-height: 21px;
+  padding-left: 47px;
+}
+
+li input[type="checkbox"] + label small {
+  font-size: 11px;
+  line-height: 13px;
+  margin-left: 5px;
+  top: -2px;
+}
+
+li input[type="checkbox"] + label small::before {
+  content: "(";
+}
+
+li input[type="checkbox"] + label small::after {
+  content: ")";
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+li input[type="checkbox"] + label::before {
+  content: "";
+  background-color: #ffffff;
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  height: 19px;
+  width: 19px;
+}
+
+li input[type="checkbox"]:checked + label::after {
+  content: url("../images/checmark.svg");
+  position: absolute;
+  left: 15px;
+  top: 11px;
+}
+
+li:has(input[type="checkbox"]:checked) {
+  color: #9b96ac;
+  background-color: #7a7593;
+}
+
+li:has(input[type="checkbox"]:active) {
+  background-color: #ff8984;
+  transition: all .1s ease-in;
+}
+
+li input[type="checkbox"]:checked + label > span {
+  position: relative;
+}
+
+li input[type="checkbox"]:checked + label > span::before {
+  content: "";
+  border: 1px solid #9b96ac;
+  width: 100%;
+  display: inline-block;
+  position: absolute;
+  top: 11px;
+  transition: all .1s ease-in;
+}
+
+a {
+    display: block;
+    width: 100%;
+    color: #ff8984;
+    background-color: #4a4f56;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    padding: 12px 0;
+    text-decoration: none;
+
+}
