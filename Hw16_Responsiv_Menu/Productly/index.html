@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Productli</title>
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="assets/fonts/gotham/stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/hamburger.css" >
+  </head>
+
+  <body>
+    <header id="header">
+      <div class="container">
+        <div id="logo">
+          <a href="index.html">
+            <img src="assets/img/Logo.svg" alt="logo" />
+          </a>
+        </div>
+        <nav>
+          <ul id="navbar">
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Resoures</a></li>
+          </ul>
+        </nav>
+        <div class="hamb-wrapper">
+          <button class="hamburger hamburger--minus" type="button" id="hamb_btn" onclick="toggleMenu()">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+        <div id="header_buttons">
+          <button type="button" class="button-white">Sign In</button>
+          <button type="button" class="button-orange">Sign Up</button>
+        </div>
+      </div>
+      <nav id="dropdown_menu">
+        <ul>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">Customers</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Resoures</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <section id="first_section">
+          <div id="first_content">
+            <h1>The Design Thinking superpowers</h1>
+            <p>
+              Tools, tutorials, design and innovation experts, all in one place!
+              The most intuitive way to imagine your next user experience.
+            </p>
+            <button type="button" class="button-orange">Ger started</button>
+          </div>
+          <div class="first_section_image">
+            <img src="assets/img/3peopels_oval.svg" alt="first section image" />
+          </div>
+        </section>
+        <section id="features">
+          <div class="features_wrap">
+            <h2>We design tools to unveil your superpowers</h2>
+          </div>
+
+          <ul>
+            <li>
+              <img src="assets/img/first_click_1.svg" alt="first clik 1" />
+              <h3>First click tests</h3>
+              <span>While most people enjoy casino gambling,</span>
+            </li>
+            <li>
+              <img
+                src="assets/img/design_surveys_2.svg"
+                alt="design surveys 2"
+              />
+              <h3>Design surveys</h3>
+              <span>Sports betting, lottery and bingo playing for the fun</span>
+            </li>
+            <li>
+              <img
+                src="assets/img/preference_tests3.svg"
+                alt="preference test v3"
+              />
+              <h3>Preference tests</h3>
+              <span>The Myspace page defines the individual.</span>
+            </li>
+            <li>
+              <img src="assets/img/second_tests_4.svg" alt="second tests 4" />
+              <h3>Five second tests</h3>
+              <span
+                >Personal choices and the overall personality of the
+                person.</span
+              >
+            </li>
+          </ul>
+          <div class="features_wrap">
+            <button type="button" class="button-orange">Sign up Now</button>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div id="logo_footer">
+          <a href="index.html"
+            ><img src="assets/img/Logo.svg" alt="logo_footer"
+          /></a>
+        </div>
+        <nav>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </nav>
+        <nav>
+          <h4>Legal stuff</h4>
+          <ul>
+            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#">Financing</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </nav>
+        <form>
+          <h4>Knowing you're always on the best energy deal.</h4>
+
+          <input
+            type="text"
+            required
+            placeholder="Enter your phone number"
+            name="phone number"
+          />
+
+          <button type="submit" class="button-orange">Sign up Now</button>
+        </form>
+      </div>
+    </footer>
+    <script>
+      function toggleMenu() {
+        document.getElementById('hamb_btn').classList.toggle('is-active');
+        document.getElementById('dropdown_menu').classList.toggle('is-active');
+      }
+    </script>
+  </body>
+</html>

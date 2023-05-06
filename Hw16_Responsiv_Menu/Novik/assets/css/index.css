@@ -1,0 +1,300 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1075px) {
+  .big_img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.container {
+  width: min(90%, 970px);
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #070707;
+  font-size: 18px;
+  line-height: 24.5px;
+}
+
+/* ===Header=== */
+
+#header {
+  height: 80px;
+  border-bottom: 1px solid #828282;
+}
+
+.main-menu {
+  padding-top: 28px;
+  padding-bottom: 20px;
+}
+.main-menu ul {
+  text-align: center;
+  font-size: 0;
+}
+
+.main-menu ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.main-menu ul li a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #828282;
+  letter-spacing: 0.02em;
+}
+
+.main-menu ul li a:hover,
+.main-menu ul li a.active {
+  color: #070707;
+}
+/* ===#Header=== */
+
+/* ===Main=== */
+
+#first-section {
+  padding-top: 12px;
+}
+h1 {
+  font-size: 48px;
+  line-height: 65px;
+  font-weight: 700;
+  margin-bottom: 46px;
+  margin-top: 0;
+}
+
+/* ====About me=== */
+#about {
+  padding: 100px 0;
+  height: 500;
+  text-align: center;
+}
+
+#about p {
+  margin-bottom: 31px;
+}
+
+#about p.last {
+  margin-bottom: 0;
+}
+
+#about h2 {
+  font-size: 34px;
+  line-height: 46.3px;
+  font-weight: 700;
+  margin-bottom: 43px;
+}
+
+.gray-bg {
+  background-color: #e5e5e5;
+}
+
+/*===Skills ==== */
+
+#skills {
+  padding: 100px 0;
+  text-align: center;
+}
+
+#skills ul {
+  text-align: center;
+  font-size: 0;
+}
+
+#skills h2 {
+  font-size: 34px;
+  line-height: 46.3px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+#skills-heading {
+  margin-bottom: 50px;
+}
+
+#skills ul {
+  text-align: center;
+  font-size: 0;
+}
+
+#skills ul li {
+  display: inline-block;
+  margin: 0 41px 50px;
+}
+
+#skills ul li > img {
+  margin-bottom: 25px;
+}
+
+#skills ul li p {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 19px;
+  color: #828282;
+  margin-bottom: 60px;
+}
+
+.stars img {
+  margin: 0 5px;
+}
+
+/*  ====PORTFO;IO*/
+
+#portfolio {
+  padding: 100px 0;
+  text-align: center;
+}
+
+#portfolio h2 {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 46px;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+#portfolio img {
+  margin-bottom: 40px;
+}
+
+#portfolio p {
+  margin-bottom: 70px;
+}
+
+#portfolio p.last {
+  margin-bottom: 0px;
+}
+
+/*====== Contacts======== */
+
+#contacts {
+  padding: 100px 0;
+  text-align: center;
+}
+
+#contacts h2 {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 46.3px;
+  text-align: center;
+  margin-bottom: 14px;
+}
+.contacts-heading {
+  margin-bottom: 56px;
+}
+#contacts button {
+  text-align: center;
+  background-color: #070707;
+  color: #ffffff;
+  width: 180px;
+  height: 44px;
+  border-radius: 22px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 24.5px;
+  margin-bottom: 30px;
+}
+
+#contacts ul {
+  font-size: 0;
+  margin-bottom: 58px;
+}
+
+#contacts ul li {
+  display: inline-block;
+  margin: 0 25px;
+}
+
+#contacts p.last {
+  font-size: 14px;
+  line-height: 19px;
+  color: #828282;
+}
+
+.hamb-wrapper {
+  display: none;
+}
+
+@keyframes growDown {
+  0% {
+    transform: skewX(0);
+  }
+  80% {
+    transform: skewX(1.1);
+  }
+  100% {
+    transform: skewX(1);
+  }
+}
+
+@media (max-width: 620px) {
+  .hamb-wrapper {
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .main-menu {
+    display: none;
+  }
+  #dropdown_menu.is-active {
+    display: block;
+    position: absolute;
+    top: 80px;
+    transform-origin: left;
+    animation: growDown 300ms ease-in-out forwards;
+  }
+}
+
+#dropdown_menu {
+  padding-top: 66px;
+  padding-bottom: 70px;
+  padding-left: 26px;
+  background-color: #ffffff;
+  z-index: 2;
+  display: none;
+  width: 375px;
+}
+
+#dropdown_menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 68px;
+}
+
+#dropdown_menu ul li a {
+  font-size: 34px;
+  line-height: 42px;
+  text-decoration: none;
+  color: #828282;
+  letter-spacing: 0.02em;
+}
+
+#dropdown_menu ul li a:hover,
+#dropdown_menu ul li a.active {
+  color: #070707;
+}
