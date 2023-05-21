@@ -1,0 +1,394 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: min(90%, 1320px);
+  margin: 0 auto;
+}
+
+#first_section {
+  background-image: url("../img/HeaderBackground.jpg");
+  padding-top: 295px;
+  padding-bottom: 120px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#first_section h1 {
+  font-size: 3rem;
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 8px;
+}
+#first_section p {
+  font-size: 1.375rem;
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.31em;
+  margin-bottom: 48px;
+}
+#first_section .form_wrap {
+  display: flex;
+  justify-content: center;
+}
+#first_section .form_wrap form {
+  position: relative;
+  width: 647px;
+  margin-bottom: 211px;
+}
+#first_section .form_wrap form input {
+  height: 60px;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 36px;
+}
+#first_section .form_wrap form input::placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 20px;
+  letter-spacing: 0.2em;
+  color: #999999;
+}
+#first_section .form_wrap form .search_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: absolute;
+  right: 5px;
+  top: 4px;
+  background-color: #5373fd;
+  width: 139px;
+  height: 52px;
+  border: 0;
+  font-family: "Aleo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+#first_section .form_wrap form .search_button svg {
+  fill: #FFFFFF;
+  width: 16px;
+  height: 16px;
+}
+#first_section .scroll_down {
+  display: flex;
+  justify-content: center;
+}
+#first_section .scroll_down a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 20px;
+  color: #FFFFFF;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+}
+#first_section .scroll_down a:hover {
+  color: yellow;
+}
+#first_section .scroll_down a:hover svg {
+  fill: yellow;
+}
+#first_section .scroll_down a svg {
+  fill: #FFFFFF;
+  width: 14px;
+  height: 16px;
+}
+
+header {
+  position: sticky;
+  background-color: #5373fd;
+  height: 84px;
+  position: sticky;
+  top: 0;
+}
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+header ul a {
+  text-decoration: none;
+  font-family: "Aleo";
+  font-size: 0.875rem;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+header ul a:hover {
+  color: yellow;
+}
+
+#why_us {
+  background-image: url(../img/WhyBackground.jpg);
+  padding: 124px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#why_us .why_us_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+#why_us .second_section_content {
+  padding-top: 66px;
+  width: 50%;
+}
+#why_us .second_section_content h2 {
+  font-family: "Aleo";
+  font-weight: 400;
+  font-size: 2.25rem;
+  line-height: 40px;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  margin-bottom: 24px;
+}
+#why_us .second_section_content p {
+  font-family: "Josefin Sans";
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 28px;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+}
+#why_us .second_section_content p + p {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+#why_us .wraper_img {
+  width: 424px;
+}
+#why_us .wraper_img .w_img1 {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+}
+#why_us .wraper_img .w_img2 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button_blue {
+  background-color: #5373fd;
+  width: 213px;
+  height: 60px;
+  border: 0;
+  font-family: "Aleo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.button_blue:active {
+  background-color: #486BFE;
+}
+
+#instruction {
+  background-color: #333333;
+  color: #FFFFFF;
+}
+#instruction svg {
+  width: 64px;
+  height: 64px;
+}
+#instruction span {
+  font-family: "Aleo";
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+#instruction .grid_wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  background-image: url(../img/Line.svg);
+  background-repeat: no-repeat;
+}
+#instruction .grid_wrap .grid_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+#instruction .search_places {
+  fill: #5373FD;
+}
+#instruction .select_places {
+  fill: #FF6363;
+}
+#instruction .book_enjoy {
+  fill: #00A2FF;
+}
+
+#spain1 {
+  background-image: url(../img/spain1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#spain2 {
+  background-image: url(../img/spain2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#spain2 .spain2_right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#spain1,
+#spain2 {
+  padding-top: 220px;
+  padding-bottom: 120px;
+}
+#spain1 .opasity_block,
+#spain2 .opasity_block {
+  background: rgba(35, 35, 35, 0.9);
+  width: 648px;
+  padding: 44px 32px;
+  color: #FFFFFF;
+  font-family: "Josefin Sans";
+  line-height: 28px;
+}
+#spain1 .opasity_block span,
+#spain2 .opasity_block span {
+  display: block;
+  font-weight: 300;
+  font-size: 1.25rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+#spain1 .opasity_block h3,
+#spain2 .opasity_block h3 {
+  font-weight: 400;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+#spain1 .opasity_block p,
+#spain2 .opasity_block p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+}
+
+#feedback {
+  background-image: url(../img/feedback.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 120px;
+  padding-bottom: 180px;
+  color: #FFFFFF;
+}
+#feedback h2 {
+  text-align: center;
+  font-family: "Aleo";
+  font-weight: 400;
+  font-size: 2.25rem;
+  line-height: 40px;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  margin-bottom: 60px;
+}
+#feedback article {
+  display: flex;
+}
+#feedback article img {
+  vertical-align: top;
+}
+#feedback .article_content {
+  background-color: #333333;
+  padding: 48px 60px;
+  font-family: "Josefin Sans";
+  line-height: 28px;
+}
+#feedback .article_content h3 {
+  font-weight: 400;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+#feedback .article_content p {
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+}
+#feedback .article_content p svg {
+  width: 20px;
+  height: 20px;
+  fill: #5373fd;
+  margin-right: 6px;
+}
+
+footer {
+  padding: 80px 0px;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-family: "Josefin Sans";
+}
+footer .logo_wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+footer p {
+  font-size: 0.875rem;
+  line-height: 20px;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  list-style: none;
+}
+footer ul svg {
+  width: 32px;
+  height: 32px;
+  fill: white;
+}
+footer ul svg:hover {
+  fill: #5373fd;
+}
