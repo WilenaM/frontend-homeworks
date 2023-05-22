@@ -6,15 +6,24 @@
   box-sizing: border-box;
 }
 
+img {
+  vertical-align: top;
+}
+
 .container {
-  width: min(90%, 1320px);
+  width: min(80%, 1320px);
   margin: 0 auto;
 }
 
+@media screen and (max-width: 1425px) {
+  .container {
+    width: min(93.75%, 1140px);
+  }
+}
 #first_section {
-  background-image: url("../img/HeaderBackground.jpg");
   padding-top: 295px;
   padding-bottom: 120px;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -122,15 +131,27 @@
 header {
   position: sticky;
   background-color: #5373fd;
-  height: 84px;
   position: sticky;
   top: 0;
+  z-index: 2;
+  padding: 32px 0;
+}
+header .logo {
+  height: 20px;
 }
 header .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 100%;
+  position: relative;
+}
+header .navbar .hamb-wrapper {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: -2px;
+}
+header .navbar .hamb-wrapper .hamburger {
+  padding: 0;
 }
 header ul {
   list-style: none;
@@ -149,9 +170,22 @@ header ul a {
 header ul a:hover {
   color: yellow;
 }
+header #hamb_menu {
+  display: none;
+  width: 100%;
+  padding: 32px 0;
+  position: absolute;
+  top: 84px;
+  background-color: #5373fd;
+}
+header #hamb_menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
 
 #why_us {
-  background-image: url(../img/WhyBackground.jpg);
   padding: 124px 0;
   background-size: cover;
   background-repeat: no-repeat;
@@ -159,10 +193,11 @@ header ul a:hover {
 #why_us .why_us_wrap {
   display: flex;
   justify-content: space-between;
+  gap: 24px;
 }
 #why_us .second_section_content {
   padding-top: 66px;
-  width: 50%;
+  width: max(550px, 49%);
 }
 #why_us .second_section_content h2 {
   font-family: "Aleo";
@@ -182,11 +217,11 @@ header ul a:hover {
   color: #FFFFFF;
 }
 #why_us .second_section_content p + p {
-  margin-top: 32px;
+  margin-top: 28px;
   margin-bottom: 32px;
 }
 #why_us .wraper_img {
-  width: 424px;
+  width: 40%;
 }
 #why_us .wraper_img .w_img1 {
   display: flex;
@@ -222,6 +257,11 @@ header ul a:hover {
   background-color: #333333;
   color: #FFFFFF;
 }
+#instruction .instruction_wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
 #instruction svg {
   width: 64px;
   height: 64px;
@@ -235,17 +275,41 @@ header ul a:hover {
   text-align: center;
 }
 #instruction .grid_wrap {
+  padding-top: 107px;
+  padding-bottom: 59px;
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  background-image: url(../img/Line.svg);
-  background-repeat: no-repeat;
 }
 #instruction .grid_wrap .grid_item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 60px;
+  gap: 4px;
+}
+#instruction .grid_wrap .grid_item .svg_wrapp {
+  height: 96px;
+  width: 96px;
+  border-radius: 50%;
+  background-color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+#instruction .line_wrap {
+  position: absolute;
+  width: 66%;
+  top: 60px;
+  left: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#instruction .line_wrap .line {
+  height: 90px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 }
 #instruction .search_places {
   fill: #5373FD;
@@ -258,15 +322,15 @@ header ul a:hover {
 }
 
 #spain1 {
-  background-image: url(../img/spain1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 #spain2 {
-  background-image: url(../img/spain2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 #spain2 .spain2_right {
   display: flex;
@@ -281,7 +345,7 @@ header ul a:hover {
 #spain1 .opasity_block,
 #spain2 .opasity_block {
   background: rgba(35, 35, 35, 0.9);
-  width: 648px;
+  width: max(550px, 49%);
   padding: 44px 32px;
   color: #FFFFFF;
   font-family: "Josefin Sans";
@@ -312,7 +376,6 @@ header ul a:hover {
 }
 
 #feedback {
-  background-image: url(../img/feedback.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 120px;
@@ -321,7 +384,7 @@ header ul a:hover {
 }
 #feedback h2 {
   text-align: center;
-  font-family: "Aleo";
+  font-family: "Aleo", sans-serif;
   font-weight: 400;
   font-size: 2.25rem;
   line-height: 40px;
@@ -330,10 +393,16 @@ header ul a:hover {
   margin-bottom: 60px;
 }
 #feedback article {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 #feedback article img {
   vertical-align: top;
+}
+#feedback .review_photo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 #feedback .article_content {
   background-color: #333333;
@@ -391,4 +460,95 @@ footer ul svg {
 }
 footer ul svg:hover {
   fill: #5373fd;
+}
+
+@media screen and (max-width: 960px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  #why_us {
+    padding: 60px 0;
+  }
+  #why_us .why_us_wrap {
+    gap: 32px;
+    flex-direction: column-reverse;
+  }
+  #why_us .wraper_img {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  #why_us .wraper_img .w_img1 {
+    margin-bottom: 0;
+  }
+  #why_us .wraper_img img {
+    width: 100%;
+    height: auto;
+  }
+  #why_us .second_section_content {
+    padding-top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  #why_us .second_section_content p {
+    text-align: center;
+  }
+
+  #instruction .line_wrap {
+    display: none;
+  }
+  #instruction .grid_wrap {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    padding: 60px 0;
+  }
+
+  #spain1 .opasity_block,
+#spain2 .opasity_block {
+    width: 100%;
+  }
+
+  #feedback {
+    padding-top: 60px;
+    padding-bottom: 120px;
+  }
+  #feedback article {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+  #feedback article img {
+    vertical-align: top;
+  }
+}
+@keyframes rotateMenu {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  70% {
+    transform: rotateX(-20deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+@media screen and (max-width: 666px) {
+  header .navbar nav {
+    display: none;
+  }
+  header .navbar .hamb-wrapper {
+    display: block;
+  }
+  header #hamb_menu.is-active {
+    display: block;
+    animation: rotateMenu 400ms ease-in-out forwards;
+    transform-origin: top center;
+  }
 }

@@ -1,3 +1,7 @@
-<svg width="874" height="92" viewBox="0 0 874 92" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path opacity="0.502" d="M1 91C1 91 217.014 -110.278 442.118 91C442.118 91 639.939 -111.5 873 91" stroke="white" stroke-linecap="round" stroke-dasharray="2 5"/>
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 442 92" width="442" height="92">
+	<title>Line-svg</title>
+	<style>
+		.s0 { opacity: .5;fill: none;stroke: #ffffff;stroke-linecap: round;stroke-dasharray: 2 } 
+	</style>
+	<path id="Layer" class="s0" d="m1 91c0 0 216-201.3 441.1 0 0 0 197.8-202.5 430.9 0"/>
 </svg>
