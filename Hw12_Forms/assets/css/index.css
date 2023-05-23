@@ -1,0 +1,217 @@
+*,
+*:before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: min(90%, 570px);
+  margin: 0 auto;
+}
+
+.inter {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #E5E5E5;
+  font-family: "Roboto", sans-serif;
+}
+
+form {
+  background-color: #ffffff;
+  border-radius: 6px;
+  margin: 55px 0;
+}
+
+.span2 {
+  grid-column: span 2;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 32px;
+  color: #1C1C1C;
+  margin-bottom: 20px;
+}
+
+#registration {
+  padding: 35px 34px 16px;
+}
+#registration .grid {
+  display: grid;
+  grid-column-gap: 10px;
+  grid-row-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+#registration .grid input[type=text], #registration .grid select {
+  width: 100%;
+  border: 1px solid #E4E4E4;
+  height: 38px;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+#registration .grid input[type=text]:focus, #registration .grid select:focus {
+  border: 1px solid #007BFF;
+}
+#registration label {
+  display: inline-block;
+  font-size: 0.9375rem;
+  line-height: 22px;
+  letter-spacing: -0.2px;
+  margin-bottom: 7px;
+}
+#registration .annotation {
+  font-size: 0.8125rem;
+  line-height: 18px;
+  letter-spacing: -0.1px;
+  padding-top: 7px;
+  color: #969696;
+}
+#registration [type=submit] {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.1px;
+  text-align: center;
+  color: white;
+  background-color: #007BFF;
+  border: 1px solid #E4E4E4;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+#registration .conditions {
+  font-size: 0.8125rem;
+  line-height: 18px;
+  letter-spacing: -0.1px;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  color: #969696;
+  border-bottom: 1px solid #E4E4E4;
+}
+#registration .conditions a {
+  text-decoration: none;
+  color: #007BFF;
+}
+#registration .login {
+  font-size: 0.9375rem;
+  line-height: 22px;
+  letter-spacing: -0.2px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 10px;
+}
+#registration .login a {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+#profile {
+  padding: 35px 34px 104px;
+}
+#profile .grid {
+  display: grid;
+  grid-column-gap: 10px;
+  grid-row-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px 0;
+}
+#profile .grid input[type=text], #profile .grid select {
+  width: 100%;
+  border: 1px solid #E4E4E4;
+  height: 38px;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+#profile .grid input[type=text]:focus, #profile .grid input[type=text]:active, #profile .grid select:focus, #profile .grid select:active {
+  border: 1px solid #007BFF;
+}
+#profile label:not(#upload_photo_label) {
+  display: inline-block;
+  font-size: 0.9375rem;
+  line-height: 22px;
+  letter-spacing: -0.2px;
+  margin-bottom: 7px;
+}
+#profile [type=submit] {
+  width: 150px;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.1px;
+  text-align: center;
+  color: white;
+  background-color: #007BFF;
+  border: 1px solid #E4E4E4;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+#profile .profile_photo_wrap {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#profile .profile_photo_wrap .profile_photo {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+#profile .profile_photo_wrap .profile_photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 70%;
+  border-radius: 50%;
+}
+#profile .profile_photo_wrap .upload_photo_wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 9px;
+}
+#profile .profile_photo_wrap .upload_photo_wrap label[for=upload_photo] {
+  display: inline-block;
+  width: 138px;
+  border: 1px solid #E4E4E4;
+  height: 30px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  position: relative;
+  margin-right: 10px;
+}
+#profile .profile_photo_wrap .upload_photo_wrap label[for=upload_photo]:focus, #profile .profile_photo_wrap .upload_photo_wrap label[for=upload_photo]:active {
+  border: 1px solid #007BFF;
+}
+#profile .profile_photo_wrap .upload_photo_wrap label[for=upload_photo] input {
+  display: none;
+}
+#profile .profile_photo_wrap .upload_photo_wrap label[for=upload_photo] img {
+  position: absolute;
+  right: 8px;
+  top: 7px;
+}
+#profile .profile_photo_wrap .upload_photo_wrap span {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.1px;
+  color: #969696;
+}
+#profile .profile_photo_wrap .upload_photo_wrap #remove_photo {
+  display: inline-block;
+  border: 1px solid #E4E4E4;
+  height: 30px;
+  width: 30px;
+  padding: 6px;
+  border-radius: 6px;
+  background-color: white;
+}

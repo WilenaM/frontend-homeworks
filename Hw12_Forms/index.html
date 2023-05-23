@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Forms</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <form action="#" method="post" id="registration">
+          <h2>Create an Account</h2>
+          <div class="grid">
+            <div class="fname">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" />
+            </div>
+            <div class="lname">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" />
+            </div>
+            <div class="email span2">
+              <label for="email">E-mail</label>
+              <input type="text" id="email" name="email" />
+              <p class="annotation">
+                We'll never share your email with anyone else.
+              </p>
+            </div>
+            <div class="span2">
+              <input type="radio" id="male" name="gender[]" value="male" />
+              <label for="male">Male</label>
+              <input type="radio" id="female" name="gender[]" value="female" />
+              <label for="female">Female</label>
+            </div>
+            <div>
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="" disabled selected hidden>Select</option>
+                <option value="au">Australia</option>
+                <option value="ca">Canada</option>
+                <option value="usa">USA</option>
+              </select>
+            </div>
+            <div>
+              <label for="city">City</label>
+              <input type="text" id="city" name="city" />
+            </div>
+            <div class="span2">
+              <button type="submit">Sign up</button>
+            </div>
+            <div class="span2 conditions">
+              <span>
+                By clicking the 'Sign Up' button, you confirm that you accept
+                our
+                <a href="#" class="inter">Terms of Use</a>
+                and
+                <a href="#" class="inter">Privacy Policy</a>.
+              </span>
+            </div>
+            <div class="span2 login">
+              <p>Have an account?</p>
+              <a href="#">Log In</a>
+            </div>
+          </div>
+        </form>
+        <form action="#" method="post" id="profile">
+          <h2>Profile</h2>
+          <div class="profile_photo_wrap">
+            <div class="profile_photo">
+              <img src="assets/img/profile_picture.jpg" alt="Profile photo" />
+            </div>
+            <div class="upload_photo_wrap">
+              <label for="upload_photo" id="upload_photo_label">
+                <input type="file" name="upload photo" id="upload_photo" />
+                <img src="assets/img/Camera.svg" alt="camera icon" />
+              </label>
+              <button type="button" id="remove_photo">
+                <img src="assets/img/Trash.svg" alt="camera icon" />
+              </button>
+              <span>Up to 1 MB (300x300 px)</span>
+            </div>
+          </div>
+          <div class="grid">
+            <div class="name">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" />
+            </div>
+            <div class="email">
+              <label for="profile_email">E-mail</label>
+              <input type="text" id="profile_email" name="Profile Email" />
+            </div>
+            <div>
+              <label for="profile_country">Country</label>
+              <select id="profile_country" name="country">
+                <option value="" disabled selected hidden>Select</option>
+                <option value="au">Australia</option>
+                <option value="ca">Canada</option>
+                <option value="usa">USA</option>
+              </select>
+            </div>
+            <div>
+              <label for="profile_city">City</label>
+              <input type="text" id="profile_city" name="city" />
+            </div>
+            <div>
+              <label for="zip">Zip-code</label>
+              <input type="text" id="zip" name="zip_code" />
+            </div>
+            <div>
+              <label for="phone">Phone Number</label>
+              <input type="text" id="phone" name="phone" />
+            </div>
+          </div>
+          <button type="submit">Update</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
