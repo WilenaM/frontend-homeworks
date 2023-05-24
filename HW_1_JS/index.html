@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hw_1_JS</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <section>
+      <h1>Hw_1_JS</h1>
+    </section>
+    <div>
+      <p>Запитай ім’я користувача та виведи у відповідь “Привіт, *ім’я*”;</p>
+      <button type="button" class="btn btn-primary" onclick="task2()">
+        Answer
+      </button>
+    </div>
+
+    <div>
+      <p>
+        Запитай рік народження користувача, порахуй його/її вік і виведи
+        результат. Поточний рік вкажи в коді як константу;
+      </p>
+      <button type="button" class="btn btn-lg btn-danger" onclick="task3()">
+        Year
+      </button>
+    </div>
+    <div>
+      <p>
+        Запитай у користувача довжину сторони квадрату і виведи периметр цього
+        квадрата.
+      </p>
+      <button type="button" class="btn btn-success" onclick="task4()">
+        kvadrat
+      </button>
+    </div>
+    <div>
+      <p>Запитай у користувача радіус кола і виведи площу такої окружності.</p>
+      <button type="button" class="btn btn-outline-warning" onclick="task5()">
+        radius_kola
+      </button>
+    </div>
+    <div>
+      <p>
+        Запитай у користувача відстань в кілометрах між двома містами і за
+        скільки годин він хоче дістатися. Порахуй швидкість, з якою необхідно
+        рухатися, щоб встигнути вчасно.
+      </p>
+      <button type="button" onclick="task6()">six</button>
+    </div>
+
+    <div class="card w-75">
+      <div class="card-body">
+        <p class="card-text">
+          Реалізуй конвертор валют. Користувач вводить долари, програма
+          переводить їх в євро. Курс валют зберігається в константі.
+        </p>
+        <button type="button" class="btn btn-primary" onclick="task7()">
+          dollar_euro
+        </button>
+      </div>
+    </div>
+    <script src="assets/js/index.js"></script>
+    <script>
+      // Min #2, #3, #4
+      function task1() {
+        var user_name = "Olena";
+        let lastName = "Zelenska";
+        const FullName = "Olena Zelenska";
+        const _second_name = "Volodymyr";
+
+        /* не правильні імена змінних
+            var user-name = ''
+            let Last name = ''
+            const 123FullName = ''
+            const !second?name = ''
+            const _second_name user_name = ''
+          */
+      }
+    </script>
+    <script>
+      // Norma 1
+      function task2() {
+        const name = prompt("enter your name");
+        alert("Hello " + name + "!");
+      }
+
+      // Norma 2
+
+      function task3() {
+        const carentYear = 2023;
+        let birthYear = +prompt("enter your birth year");
+        const age = carentYear - birthYear;
+        if (isNaN(age)) {
+          alert("error wrong number");
+        } else if (age <= 0) {
+          alert("error wrong year");
+        } else {
+          alert(age);
+        }
+      }
+
+      //Norma 3
+
+      function task4() {
+        const storona = +prompt("enter dovjuny kvadrata");
+        if (isNaN(storona)) {
+          alert("error wrong number");
+        } else if (storona <= 0) {
+          alert("error wrong value");
+        } else {
+          alert(storona * 4);
+        }
+      }
+    </script>
+  </body>
+</html>
