@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tupu dannuh</title>
+  </head>
+  <body>
+    <h1>Типи даних та оператори</h1>
+    <div>
+      <h2>Min 1</h2>
+      <p>
+        Виконай додавання 0,1 і 0,2 добийся математично правильної відповіді.
+      </p>
+      <button type="button" onclick="task1()">Answer</button>
+    </div>
+    <div>
+      <h2>Min 2</h2>
+      <p>
+        Виконай додавання рядка "1" і цифри 2 (обидві операнди повинні бути в
+        змінних), добийся математично правильної відповіді.
+      </p>
+      <button type="button" onclick="task2()">Answer</button>
+    </div>
+    <div>
+      <h2>Min 3</h2>
+      <p>
+        Користувач вказує обсяг флешки в Гб. Програма повинна порахувати скільки
+        файлів розміром в 820 Мб поміщається на флешку.
+      </p>
+      <button type="button" onclick="task3()">Answer</button>
+    </div>
+    <div>
+      <h2>Min 4</h2>
+      <p>
+        Користувач вводить суму грошей в гаманці і ціну однієї шоколадки.
+        Програма виводить скільки шоколадок може купити користувач і скільки
+        здачі у нього залишиться.
+      </p>
+      <input id="user_money" type="text" />
+      <input id="chocolate_prise" type="text" />
+      <button type="button" onclick="task4()">Answer</button>
+      <p id="chocolate_count"></p>
+      <p id="zalushok"></p>
+    </div>
+
+    <div>
+      <h2>Min 5</h2>
+      <p>
+        Запитай у користувача тризначне число і виведи його задом наперед. Для
+        вирішення завдання тобі знадобиться оператор % (залишок від ділення).
+      </p>
+      <input id="number" type="text" />
+      <button type="button" onclick="task5()">Answer</button>
+      <p id="result"></p>
+    </div>
+
+    <div>
+      <h2>Max 6</h2>
+      <p>
+        Користувач вводить суму вкладу в банк на 2 місяці, з процентною ставкою
+        депозиту 5% річних. Вивести суму нарахованих відсотків.
+      </p>
+      <input id="symmaGrn" type="text" />
+      <button type="button" onclick="task6()">Answer</button>
+      <p id="deposit"></p>
+    </div>
+
+    <script>
+      
+      
+      function task1() {
+        alert((0.1 + 0.2).toFixed(1));
+      }
+
+      function task2() {
+        const string = "1";
+        const number = 2;
+        alert(number + Number(string));
+      }
+
+      function task3() {
+        const gb = 1024;
+        const fileSize = 820;
+        const sizeFlash = +prompt("enter size flash");
+        alert(parseInt((sizeFlash * gb) / fileSize));
+      }
+
+      function task4() {
+        const userMoney = parseFloat(
+          document.getElementById("user_money").value
+        );
+        const chocolatePrise = parseFloat(
+          document.getElementById("chocolate_prise").value
+        );
+        if (userMoney >= 0 && chocolatePrise > 0) {
+          const chocolateCount = parseInt(userMoney / chocolatePrise);
+          const zalushok = userMoney % chocolatePrise;
+          document.getElementById("chocolate_count").innerHTML =
+            "You can buy " + chocolateCount + " chocolates";
+          document.getElementById("zalushok").innerHTML =
+            "You will have $" + zalushok + " after purchase";
+        } else {
+          document.getElementById("chocolate_count").innerHTML =
+            '<span style="color: red">You entered wrong data</span>';
+          document.getElementById("zalushok").innerHTML = "";
+        }
+      }
+
+      function task5() {
+        const number = document.getElementById("number").value;
+        if (number >= 100 && number <= 999) {
+          const first = number % 10;
+          const last = Math.floor(number / 100);
+          const midle = (number - last * 100 - first) / 10;
+          document.getElementById(
+            "result"
+          ).innerHTML = `${first}${midle}${last}`;
+        } else {
+          document.getElementById("result").innerHTML =
+            '<span style="color: red">You entered wrong data</span>';
+        }
+      }
+
+      function task6() {
+        const symmaGrn = document.getElementById("symmaGrn").value;
+        const month = 2;
+        const vidsotokRik = 0.05;
+        if (symmaGrn >= 0) {
+          const firstMonth = (symmaGrn * 0.05) / 12;
+          const result = ((firstMonth + symmaGrn) * 0.05) / 12 + firstMonth;
+          document.getElementById("deposit").innerHTML = `Profit: ${result.toFixed(2)}`;
+        } else {
+          document.getElementById("deposit").innerHTML =
+            '<span style="color: red">You entered wrong data</span>';
+        }
+      }
+    </script>
+  </body>
+</html>
