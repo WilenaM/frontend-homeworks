@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Ymovu i Cuklu</h1>
+
+    <div class="card">
+      <div class="card-header">Task 1</div>
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">
+          Запитай у користувача його вік і визначи, ким він є: дитиною (0-11),
+          підлітком (12-17), дорослим (18_59) або пенсіонером (60 ...), передбач
+          можливість введення невірних даних.
+        </p>
+        <label for="number" class="form-label">Enter your age</label>
+        <input type="number" class="form-control" name="age" id="age" />
+        <button class="btn btn-primary" onclick="task1()">Result</button>
+      </div>
+      <div class="card-footer">
+        <p>Result: <span id="result"></span></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">Task 2</div>
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">
+          Запитай у користувача число від 0 до 9 і виведи йому спецсимвол, який
+          розташований на цій клавіші (1 !, 2 @, 3 # і т. д).
+        </p>
+        <label for="symbol" class="form-label">Enter your number</label>
+        <input type="number" class="form-control" name="symbol" id="symbol" />
+        <button class="btn btn-primary" onclick="task2()">Result</button>
+      </div>
+      <div class="card-footer">
+        <p>Result: <span id="symbol_number"></span></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">Task 3</div>
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">
+          Підрахуй суму всіх чисел в заданому користувачем діапазоні.
+        </p>
+        <label for="first_number" class="form-label"
+          >Enter your first number</label
+        >
+        <input
+          type="number"
+          class="form-control"
+          name="first_number"
+          id="first_number"
+        />
+        <label for="second_number" class="form-label"
+          >Enter your second number</label
+        >
+        <input
+          type="number"
+          class="form-control"
+          name="second_number"
+          id="second_number"
+        />
+        <button class="btn btn-primary" onclick="task3()">Result</button>
+      </div>
+      <div class="card-footer">
+        <p>Result: <span id="symma"></span></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">Task 4</div>
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">
+          Запитай у користувача 2 числа і знайди найбільший спільний дільник
+        </p>
+        <label for="first_number2" class="form-label"
+          >Enter your first number</label
+        >
+        <input
+          type="number"
+          class="form-control"
+          name="first_number"
+          id="first_number2"
+        />
+        <label for="second_number2" class="form-label"
+          >Enter your second number</label
+        >
+        <input
+          type="number"
+          class="form-control"
+          name="second_number"
+          id="second_number2"
+        />
+        <button class="btn btn-primary" onclick="task4()">Result</button>
+      </div>
+      <div class="card-footer">
+        <p>Result: <span id="dilnuk"></span></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">Task 5</div>
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">
+          Запитай у користувача число і виведи всі дільники цього числа.
+        </p>
+        <label for="user_number" class="form-label">Enter your number</label>
+        <input
+          type="number"
+          class="form-control"
+          name="user_number"
+          id="user_number"
+        />
+        <button class="btn btn-primary" onclick="task5()">Result</button>
+      </div>
+      <div class="card-footer">
+        <p>Result: <span id="dilnuku"></span></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">Task 6</div>
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">
+          Запитай у користувача п’ятирозрядне число і визначи, чи є воно
+          паліндромом
+        </p>
+        <label for="user_n" class="form-label"
+          >"Введіть п'ятирозрядне число:"</label
+        >
+        <input type="user_n" class="form-control" name="user_n" id="user_n" />
+        <button class="btn btn-primary" onclick="task6()">Result</button>
+      </div>
+      <div class="card-footer">
+        <p>Result: <span id="numb"></span></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">Task 7</div>
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">
+          Запитай у користувача суму покупки і виведи суму до оплати зі знижкою:
+          від 200 до 300 - знижка буде 3%; від 300 до 500 - 5%; від 500 і вище -
+          7%.
+        </p>
+        <label for="purchase_amount" class="form-label"
+          >"Введіть суму покупки:"</label
+        >
+        <input
+          type="purchase_amount"
+          class="form-control"
+          name="purchase_amount"
+          id="purchase_amount"
+        />
+        <button class="btn btn-primary" onclick="task7()">Result</button>
+      </div>
+      <div class="card-footer">
+        <p>Сума до оплати зі знижкою: <span id="price_discount"></span></p>
+      </div>
+    </div>
+
+    <script>
+      function task7() {
+        const purchaseAmount = document.getElementById(
+          "purchase_amount"
+        ).value;
+        let discount = 0;
+        if (purchaseAmount >= 200 && purchaseAmount < 300) {
+          discount = 0.03;
+        } else if (purchaseAmount >= 300 && purchaseAmount < 500) {
+          discount = 0.05;
+        } else if (purchaseAmount >= 500) {
+          discount = 0.07;
+        }
+        const discountedAmount = purchaseAmount - purchaseAmount * discount;
+        document.getElementById("price_discount").innerHTML =
+        discountedAmount;
+      }
+      function task6() {
+        const number = document.getElementById("user_n").value;
+        const isPalindrome = (number) => {
+          const numStr = String(number);
+          for (let i = 0; i < numStr.length / 2; i++) {
+            if (numStr[i] !== numStr[numStr.length - 1 - i]) {
+              return false;
+            }
+          }
+          return true;
+        };
+        if (number.length !== 5) {
+          document.getElementById("numb").innerHTML =
+            "Ви ввели неправильне число.";
+        } else {
+          if (isPalindrome(number)) {
+            document.getElementById("numb").innerHTML = "Це паліндром";
+          } else {
+            document.getElementById("numb").innerHTML = "Це не паліндром";
+          }
+        }
+      }
+
+      function task5() {
+        const user_number = parseInt(
+          document.getElementById("user_number").value
+        );
+
+        let dilnuku = user_number;
+
+        for (let i = 1; i <= user_number / 2; i++) {
+          if (user_number % i === 0) {
+            dilnuku += `, ${i}`;
+          }
+        }
+        document.getElementById("dilnuku").innerHTML = dilnuku;
+      }
+
+      function task4() {
+        const first_number = parseInt(
+          document.getElementById("first_number2").value
+        );
+        const second_number = parseInt(
+          document.getElementById("second_number2").value
+        );
+        let small, big;
+        if (first_number < second_number) {
+          small = first_number;
+          big = second_number;
+        } else if (first_number > second_number) {
+          big = first_number;
+          small = second_number;
+        } else if (first_number === second_number) {
+          document.getElementById("dilnuk").innerHTML = first_number;
+          return null;
+        } else {
+          document.getElementById("dilnuk").innerHTML = "Enter correct number";
+          return null;
+        }
+
+        for (let i = small; i >= 1; i--) {
+          if (small % i === 0 && big % i === 0) {
+            document.getElementById("dilnuk").innerHTML = i;
+            return null;
+          }
+        }
+      }
+
+      function task3() {
+        const first_number = parseInt(
+          document.getElementById("first_number").value
+        );
+        const second_number = parseInt(
+          document.getElementById("second_number").value
+        );
+
+        let symma = 0;
+        if (first_number <= second_number) {
+          for (let i = first_number; i <= second_number; i++) {
+            symma += i;
+          }
+          document.getElementById("symma").innerHTML = symma;
+        } else {
+          document.getElementById("symma").innerHTML = "Enter correct diapason";
+        }
+      }
+
+      function task2() {
+        let symbol = document.getElementById("symbol").value;
+        switch (symbol) {
+          case "0":
+            symbol = ")";
+            break;
+          case "1":
+            symbol = "!";
+            break;
+          case "2":
+            symbol = "@";
+            break;
+          case "3":
+            symbol = "#";
+            break;
+          case "4":
+            symbol = "$";
+            break;
+          case "5":
+            symbol = "%";
+            break;
+          case "6":
+            symbol = "^";
+            break;
+          case "7":
+            symbol = "&";
+            break;
+          case "8":
+            symbol = "*";
+            break;
+          case "9":
+            symbol = "(";
+            break;
+          default:
+            symbol = "enter correct digit";
+        }
+        document.getElementById("symbol_number").innerHTML = symbol;
+      }
+
+      function task1() {
+        const age = document.getElementById("age").value;
+        if (age >= 0 && age <= 11) {
+          document.getElementById("result").innerHTML = "Child";
+        } else if (age >= 12 && age <= 17) {
+          document.getElementById("result").innerHTML = "Teenager";
+        } else if (age >= 18 && age <= 59) {
+          document.getElementById("result").innerHTML = "Adult";
+        } else if (age >= 60 && age <= 120) {
+          document.getElementById("result").innerHTML = "Pensionato";
+        } else {
+          document.getElementById("result").innerHTML = "Enter correct age...";
+        }
+      }
+    </script>
+  </body>
+</html>
