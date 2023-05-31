@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Functions</h1>
+    
+
+    <script>
+      // Напиши всі можливі варіанти створення функцій
+      function firstType() {
+        return null;
+      }
+
+      const secondType = function () {
+        return null;
+      };
+
+      const trirdType = () => {
+        return null;
+      };
+
+      // Створи функцію, яка буде виводити кількість переданих їй аргументів.
+
+      function paramsAmount() {
+        return arguments.length;
+      }
+
+      // Напиши функцію, яка приймає 2 числа і повертає :
+      // -1, якщо перше число менше, ніж друге;
+      // 1 - якщо перше число більше, ніж друге;
+      // 0 - якщо числа рівні.
+
+      function twoNumbers(firstNumber, secondNumber) {
+        if (isNaN(parseInt(firstNumber)) || isNaN(parseInt(secondNumber))) {
+          return "non valid params";
+        }
+
+        if (firstNumber < secondNumber) {
+          return -1;
+        } else if (firstNumber > secondNumber) {
+          return 1;
+        } else if (firstNumber == secondNumber) {
+          return 0;
+        }
+      }
+
+      // Напиши функцію, яка обчислює факторіал переданого їй числа.
+
+      function faktoril(n) {
+        if (n === 0) {
+          return 1;
+        } else {
+          return n * faktoril(n - 1);
+        }
+      }
+
+      // Напиши функцію, яка приймає три окремі цифри і перетворює їх в одне число. Наприклад: цифри 1, 4, 9 перетворяться в число 149.
+
+      function threeNumber(oneN, twoN, threeN) {
+        return parseInt(`${oneN}${twoN}${threeN}`);
+      }
+
+      // Напиши функцію, яка приймає довжину і ширину прямокутника і обчислює його площу. Якщо в функцію передали 1 параметр, то вона обчислює площу квадрата
+    
+      function peimetr(a, b) [
+        if (b) {
+            return (a+b)*2;
+        }
+        else {
+            return 4*b;
+        }
+      ]
+
+
+    </script>
+  </body>
+</html>
