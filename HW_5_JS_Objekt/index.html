@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>Object</title>
+  </head>
+  <body>
+    <div class="container">
+    <h1>Object</h1>
+    <p>
+      Створи об'єкт, що описує автомобіль (виробник, модель, рік випуску,
+      середня швидкість, обсяг паливного баку, середня витрата палива на 100
+      км., водії), і наступні методи для роботи з цим об'єктом:
+      <br />
+      Метод, який виводить на екран інформацію про автомобіль.
+      <br />
+      Додавання ім’я водія у список
+      <br />
+      Перевірка водія на наявність його ім’я у списку
+      <br />
+      Підрахунок необхідного часу та кількості палива для подолання переданої
+      відстані з середньою швидкістю. Враховуй, що через кожні 4 години дороги
+      водієві необхідно робити перерву на 1 годину.
+    </p>
+
+    <div class="accordion" id="car_info">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+            onclick="showCarInfo()"
+          >
+            Car INFO
+          </button>
+        </h2>
+        <div
+          id="collapseOne"
+          class="accordion-collapse collapse"
+          data-bs-parent="#car_info"
+        >
+          <div class="accordion-body"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">CALCULATORE</h4>
+        <p class="card-text">Підрахунок необхідного часу та кількості палива для подолання переданої
+          відстані з середньою швидкістю. </p>
+        <label for="distance" class="form-label">Enter distance</label>
+        <input type="number" class="form-control" name="distance" id="distance">
+        <button class="btn btn-primary" onclick="calculatoreTime()">Result</button>
+      </div>
+      <div class="card-footer" id="result">
+      </div>
+    </div>
+  </div>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const carReno = {
+        producer: "Reno",
+        model: "Clio",
+        year: 2018,
+        velocity: 90,
+        gasVolume: 40,
+        spendingGas: 8,
+        description: function () {
+          console.log(this.producer, this.model, this.year);
+          console.log("Average velocity", this.velocity, "km/h");
+          console.log("Volume of the fuel tank", this.gasVolume, "liters");
+          console.log(
+            "Average fuel consumption per 100 km",
+            this.spendingGas,
+            "liters"
+          );
+        },
+        travelTime(distance) {
+          const time = +(distance / this.velocity).toFixed(2);
+          const stop = Math.ceil(time / 4) - 1;
+          const totalTime = time + stop;
+          const consumption = (distance / 100) * this.spendingGas;
+
+          console.log("Travel time:", totalTime, "hours");
+          console.log("Fule spent on travel:", consumption, "liters");
+        },
+      };
+    </script>
+    <script>
+      const carToyota = {
+        producer: "Toyota",
+        model: "CHR",
+        year: 2023,
+        velocity: 90,
+        gasVolume: 50,
+        spendingGas: 6,
+        img: "assets/image/toyota.jpg",
+        description: function () {
+          return {
+            img: this.img,
+            name: `${this.producer} ${this.model} ${this.year}`,
+            averageVelocity: `Average velocity ${this.velocity} km/h`,
+            fuelTank: `Volume of the fuel tank ${this.gasVolume} liters`,
+            consumption: `Average fuel consumption per 100 km ${this.spendingGas} liters`,
+          };
+        },
+        travelTime(distance) {
+          const time = +(distance / this.velocity).toFixed(2);
+          const stop = Math.ceil(time / 4) - 1;
+          const totalTime = time + stop;
+          const consumption = (distance / 100) * this.spendingGas;
+        
+          return {
+            totalTime: `Travel time ${totalTime} hours`,
+            consumption: `Fuel spent on travel ${consumption} liters`
+          }
+        }
+      };
+
+      function showCarInfo() {
+        const carInfo = carToyota.description();
+        document.querySelector(
+          ".accordion-body"
+        ).innerHTML = `<div class="img_wrapp"><img src="${carInfo.img}" alt="${carInfo.name}"></div>
+            <div class="info_car">
+              <p>${carInfo.name}</p>
+              <p>${carInfo.averageVelocity}</p>
+              <p>${carInfo.consumption}</p>
+              <p>${carInfo.fuelTank}</p>
+            </div>`;
+      }
+
+      function calculatoreTime() {
+        const distance = document.getElementById('distance').value;
+        const result = carToyota.travelTime(distance);
+
+        document.getElementById('result').innerHTML=`<p>${result.totalTime}</p> <p>${result.consumption}</p>`
+      }
+
+
+    </script>
+  </body>
+</html>

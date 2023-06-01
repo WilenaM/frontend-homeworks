@@ -1,0 +1,28 @@
+#car_info .accordion-body {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  padding: 30px;
+  gap: 60px;
+}
+#car_info .accordion-body .img_wrapp img {
+  width: 100%;
+  height: auto;
+}
+#car_info .accordion-body .info_car {
+  padding-top: 60px;
+  width: 100%;
+}
+#car_info .accordion-body .info_car p {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+.container {
+  width: min(90%, 1140px);
+  margin: 0 auto;
+}
+
+h1 {
+  margin-top: 80px;
+}
