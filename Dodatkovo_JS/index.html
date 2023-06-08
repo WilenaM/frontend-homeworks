@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <title>Document</title>
+    <style>
+      .grid_table {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 40px;
+      }
+      .grid_item p {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-header">Task1</div>
+      <div class="card-body">
+        <h4 class="card-title">Special title treatment</h4>
+        <p class="card-text">
+          Написати функцію, яка приймає 2 числа та повертає меньше з них.
+        </p>
+        <div class="mb-3">
+          <label for="first_number" class="form-label">First number</label>
+          <input
+            type="number"
+            class="form-control"
+            id="first_number"
+            aria-describedby="number"
+          />
+          <label for="second_number" class="form-label">Second number</label>
+          <input
+            type="number"
+            class="form-control"
+            id="second_number"
+            aria-describedby="number"
+          />
+        </div>
+        <div class="mb-3">
+          <button
+            type="button"
+            class="btn btn-primary"
+            onclick="showLesserNumber()"
+          >
+            Get result
+          </button>
+        </div>
+        <div class="mb-3">
+          <label for="result" class="form-label">Result</label>
+          <input type="number" readonly class="form-control" id="result" />
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">Task2</div>
+      <div class="card-body">
+        <h4 class="card-title">Special title treatment</h4>
+        <p class="card-text">
+          Написати функцію, яка приймає 2 числа, знак між ними та повертає
+          результат.
+        </p>
+        <div class="mb-3">
+          <label for="calc_fnumber" class="form-label">First number</label>
+          <input
+            type="number"
+            class="form-control"
+            id="calc_fnumber"
+            aria-describedby="number"
+          />
+          <label for="calc_snumber" class="form-label">Second number</label>
+          <input
+            type="number"
+            class="form-control"
+            id="calc_snumber"
+            aria-describedby="number"
+          />
+        </div>
+        <div class="mb-3">
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            id="symbol_for_calc"
+          >
+            <option selected>Select symbol</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="*">*</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <button type="button" class="btn btn-primary" onclick="showCalc()">
+            Get result
+          </button>
+        </div>
+        <div class="mb-3">
+          <label for="calculatore" class="form-label">Result</label>
+          <input type="text" readonly class="form-control" id="calculatore" />
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">Task2</div>
+      <div class="card-body">
+        <h4 class="card-title">Special title treatment</h4>
+        <p class="card-text">
+          Написати функцію, яка приймає 2 числа, знак між ними та повертає
+          результат.
+        </p>
+        <div class="mb-3">
+          <label for="calc_fnumber" class="form-label">First number</label>
+          <input
+            type="number"
+            class="form-control"
+            id="calc_fnumber"
+            aria-describedby="number"
+          />
+          <label for="calc_snumber" class="form-label">Second number</label>
+          <input
+            type="number"
+            class="form-control"
+            id="calc_snumber"
+            aria-describedby="number"
+          />
+        </div>
+        <div class="mb-3">
+          <button type="button" class="btn btn-primary" onclick="showCalc()">
+            Get result
+          </button>
+        </div>
+        <div class="mb-3">
+          <label for="calculatore" class="form-label">Result</label>
+          <input type="text" readonly class="form-control" id="calculatore" />
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">Task3</div>
+      <div class="card-body">
+        <h4 class="card-title">Special title treatment</h4>
+        <p class="card-text">
+          Написати функцію, яка приймає число та виводить таблицю множення для
+          цього числа. Викликати функцію для чисел від 2 до 9.
+        </p>
+        <div class="mb-3">
+          <div class="grid_table" id="tableMbog"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>
