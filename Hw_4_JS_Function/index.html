@@ -4,79 +4,240 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <title>Functions</title>
   </head>
   <body>
     <h1>Functions</h1>
-    
+    <div class="card">
+      <div class="card-header">Task</div>
+      <div class="card-body">
+        <h4 class="card-title">Special title treatment</h4>
+        <p class="card-text">
+          Напиши функцію, яка приймає 2 числа і повертає : // -1, якщо перше
+          число менше, ніж друге; // 1 - якщо перше число більше, ніж друге; //
+          0 - якщо числа рівні.
+        </p>
+        <div class="mb-3">
+          <label for="first_number" class="form-label">First number</label>
+          <input
+            type="number"
+            class="form-control"
+            id="first_number"
+            aria-describedby="number"
+          />
+          <label for="second_number" class="form-label">Second number</label>
+          <input
+            type="number"
+            class="form-control"
+            id="second_number"
+            aria-describedby="number"
+          />
+        </div>
+        <div class="mb-3">
+          <button type="button" class="btn btn-primary" onclick="showTwoNum()">
+            Get result
+          </button>
+        </div>
+        <div class="mb-3">
+          <label for="two_numb_result" class="form-label">Result</label>
+          <input
+            type="number"
+            readonly
+            class="form-control"
+            id="two_numb_result"
+          />
+        </div>
+      </div>
+    </div>
 
-    <script>
-      // Напиши всі можливі варіанти створення функцій
-      function firstType() {
-        return null;
-      }
+    <div class="card">
+      <div class="card-header">Task</div>
+      <div class="card-body">
+        <h4 class="card-title">Special title treatment</h4>
+        <p class="card-text">
+          // Напиши функцію, яка обчислює факторіал переданого їй числа.
+        </p>
+        <div class="mb-3">
+          <label for="fakt_number" class="form-label">First number</label>
+          <input
+            type="number"
+            class="form-control"
+            id="fakt_number"
+            aria-describedby="number"
+          />
+        </div>
 
-      const secondType = function () {
-        return null;
-      };
+        <div class="mb-3">
+          <button
+            type="button"
+            class="btn btn-primary"
+            onclick="showFaktorial()"
+          >
+            Get result
+          </button>
+        </div>
+        <div class="mb-3">
+          <label for="faktorial" class="form-label">Result</label>
+          <input type="number" readonly class="form-control" id="faktorial" />
+        </div>
+      </div>
+    </div>
 
-      const trirdType = () => {
-        return null;
-      };
+    <div class="card">
+      <div class="card-header">Task</div>
+      <div class="card-body">
+        <h4 class="card-title">Special title treatment</h4>
+        <p class="card-text">
+          Напиши функцію, яка приймає три окремі цифри і перетворює їх в одне
+          число. Наприклад: цифри 1, 4, 9 перетворяться в число 149.
+        </p>
+        <div class="mb-3">
+          <label for="oneN" class="form-label">First number</label>
+          <input
+            type="number"
+            class="form-control"
+            id="oneN"
+            aria-describedby="number"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="twoN" class="form-label">Second number</label>
+          <input
+            type="number"
+            class="form-control"
+            id="twoN"
+            aria-describedby="number"
+          />
+        </div>
+        <div class="mb-3">
+          <button type="button" class="btn btn-primary" onclick="turnNumb()">
+            Get result
+          </button>
+        </div>
+        <div class="mb-3">
+          <label for="turnNumb" class="form-label">Result</label>
+          <input type="number" readonly class="form-control" id="turnNumb" />
+        </div>
+      </div>
+    </div>
 
-      // Створи функцію, яка буде виводити кількість переданих їй аргументів.
-
-      function paramsAmount() {
-        return arguments.length;
-      }
-
-      // Напиши функцію, яка приймає 2 числа і повертає :
-      // -1, якщо перше число менше, ніж друге;
-      // 1 - якщо перше число більше, ніж друге;
-      // 0 - якщо числа рівні.
-
-      function twoNumbers(firstNumber, secondNumber) {
-        if (isNaN(parseInt(firstNumber)) || isNaN(parseInt(secondNumber))) {
-          return "non valid params";
-        }
-
-        if (firstNumber < secondNumber) {
-          return -1;
-        } else if (firstNumber > secondNumber) {
-          return 1;
-        } else if (firstNumber == secondNumber) {
-          return 0;
-        }
-      }
-
-      // Напиши функцію, яка обчислює факторіал переданого їй числа.
-
-      function faktoril(n) {
-        if (n === 0) {
-          return 1;
-        } else {
-          return n * faktoril(n - 1);
-        }
-      }
-
-      // Напиши функцію, яка приймає три окремі цифри і перетворює їх в одне число. Наприклад: цифри 1, 4, 9 перетворяться в число 149.
-
-      function threeNumber(oneN, twoN, threeN) {
-        return parseInt(`${oneN}${twoN}${threeN}`);
-      }
-
-      // Напиши функцію, яка приймає довжину і ширину прямокутника і обчислює його площу. Якщо в функцію передали 1 параметр, то вона обчислює площу квадрата
-    
-      function peimetr(a, b) [
-        if (b) {
-            return (a+b)*2;
-        }
-        else {
-            return 4*b;
-        }
-      ]
-
-
-    </script>
+    <div class="card">
+      <div class="card-header">Task</div>
+      <div class="card-body">
+        <h4 class="card-title">Special title treatment</h4>
+        <p class="card-text">
+          // Напиши функцію, яка приймає довжину і ширину прямокутника і
+          обчислює його площу. Якщо в функцію передали 1 параметр, то вона
+          обчислює площу квадрата
+        </p>
+        <div class="mb-3">
+          <label for="width" class="form-label">First number</label>
+          <input
+            type="number"
+            class="form-control"
+            id="width"
+            aria-describedby="number"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="height" class="form-label">Second number</label>
+          <input
+            type="number"
+            class="form-control"
+            id="height"
+            aria-describedby="number"
+          />
+        </div>
+        <div class="mb-3">
+          <button type="button" class="btn btn-primary" onclick="showArea()">
+            Get result
+          </button>
+        </div>
+        <div class="mb-3">
+          <label for="area_result" class="form-label">Result</label>
+          <input type="text" readonly class="form-control" id="area_result" />
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">Task</div>
+      <div class="card-body">
+        <h4 class="card-title">Special title treatment</h4>
+        <p class="card-text">
+          Напиши функцію, яка перевіряє, чи є передане їй число “досконалим
+          числом”. Досконале число - це число, яке дорівнює сумі всіх своїх
+          дільників.
+        </p>
+        <div class="mb-3">
+          <label for="perf_numb" class="form-label">Enter number</label>
+          <input
+            type="number"
+            class="form-control"
+            id="perf_numb"
+            aria-describedby="number"
+          />
+        </div>
+        <div class="mb-3">
+          <button type="button" class="btn btn-primary" onclick="numbPerfect()">
+            Get result
+          </button>
+        </div>
+        <div class="mb-3">
+          <label for="perfect_result" class="form-label">Result</label>
+          <input
+            type="text"
+            readonly
+            class="form-control"
+            id="perfect_result"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">Task</div>
+      <div class="card-body">
+        <h4 class="card-title">Special title treatment</h4>
+        <p class="card-text">
+          Напиши функцію, яка приймає мінімальне і максимальне значення для
+          діапазону, і виводить тільки ті числа з діапазону, які є досконалими.
+          Використовуй написану раніше функцію, щоб дізнатися, чи є це число
+          досконалим.
+        </p>
+        <div class="mb-3">
+          <label for="first-number" class="form-label">First number</label>
+          <input
+            type="number"
+            class="form-control"
+            id="first-number"
+            aria-describedby="number"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="second-number" class="form-label">Second number</label>
+          <input
+            type="number"
+            class="form-control"
+            id="second-number"
+            aria-describedby="number"
+          />
+        </div>
+        <div class="mb-3">
+          <button type="button" class="btn btn-primary" onclick="perfResult()">
+            Get result
+          </button>
+        </div>
+        <div class="mb-3">
+          <label for="doskonali_result" class="form-label">Result</label>
+          <input
+            type="text"
+            readonly
+            class="form-control"
+            id="doskonali_result"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/index.js"></script>
   </body>
 </html>
