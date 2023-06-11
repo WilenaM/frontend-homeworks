@@ -68,28 +68,26 @@ function firstType() {
 
          // Напиши функцію, яка приймає довжину і ширину прямокутника і обчислює його площу. Якщо в функцію передали 1 параметр, то вона обчислює площу квадрата
          
-         function area(a, b) {
-            if (b) {
-                return b*a
-            } else {
-                return a*a
-            }
+         function area(a, b=a) {
+                return a*b
          }
 
          function showArea () {
+            let result;
             const width = document.getElementById('width').value;
             const height = document.getElementById('height').value;
             if(width && height) {
-                document.getElementById('area_result').value=area(width, height);
+              result=area(width, height);
             } else if (width) {
-                document.getElementById('area_result').value=area(width);
+              result=area(width);
             }
             else if (height){
-                document.getElementById('area_result').value=area(height);
+              result=area(height);
             }
             else {
-                document.getElementById('area_result').value='height or width are not correct'
+              result='height or width are not correct'
             }
+            document.getElementById('area_result').value=result
          }
         
         //  Напиши функцію, яка перевіряє, чи є передане їй число “досконалим числом”. Досконале число - це число, яке дорівнює сумі всіх своїх дільників.
