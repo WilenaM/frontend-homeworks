@@ -1,0 +1,57 @@
+[
+  {
+    "image": "assets/img/great1.jpg",
+    "title": "SEE THE UNMATCHED BEAUTY OF THE GREAT.",
+    "link": "https://www.unian.ua/",
+    "description": "Free directories: directories are perfect for customers that are searching for...",
+    "autor": {
+      "foto": "assets/img/alja1.jpg",
+      "name": "ALJA BRUN",
+      "time": "20 Jan 2020"
+    }
+  },
+  {
+    "image": "assets/img/pointers2.jpg",
+    "title": "EFFECTIVE ADVERTISING POINTERS",
+    "link": "https://www.unian.ua/",
+    "description": " Having a home based business is a wonderful asset to your life...",
+    "autor": {
+      "foto": "assets/img/dominic2.jpg",
+      "name": "DOMINIC FREEMAN",
+      "time": "13 Dec 2019"
+    }
+  },
+  {
+    "image": "assets/img/hypnotize3.jpg",
+    "title": "HYPNOTIZE YOURSELF INTO THE GHOST.",
+    "link": "https://www.unian.ua/",
+    "description": "There are many things that are important to catalog design...",
+    "autor": {
+      "foto": "assets/img/alice3.jpg",
+      "name": "ALICE WARD",
+      "time": "30 Nov 2019"
+    }
+  },
+  {
+    "image": "assets/img/pointers2.jpg",
+    "title": "EFFECTIVE ADVERTISING POINTERS",
+    "link": "https://www.unian.ua/",
+    "description": " Having a home based business is a wonderful asset to your life...",
+    "autor": {
+      "foto": "assets/img/dominic2.jpg",
+      "name": "DOMINIC FREEMAN",
+      "time": "13 Dec 2019"
+    }
+  },
+  {
+    "image": "assets/img/hypnotize3.jpg",
+    "title": "HYPNOTIZE YOURSELF INTO THE GHOST.",
+    "link": "https://www.unian.ua/",
+    "description": "There are many things that are important to catalog design...",
+    "autor": {
+      "foto": "assets/img/alice3.jpg",
+      "name": "ALICE WARD",
+      "time": "30 Nov 2019"
+    }
+  }
+]
