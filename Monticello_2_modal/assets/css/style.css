@@ -195,12 +195,11 @@ header .scroll_whatwedo {
   gap: 64px;
 }
 #whatwedo .project_content .img_trade {
-  width: min(100%, 630px);
-  height: auto;
   top: 57px;
 }
 #whatwedo .project_content .img_trade img {
-  width: 100%;
+  width: 630px;
+  height: auto;
 }
 #whatwedo .project_content .description {
   padding-top: 94px;
@@ -239,7 +238,7 @@ header .scroll_whatwedo {
 #last_news {
   padding-top: 120px;
   padding-bottom: 150px;
-  background-image: url("../img/city 2 @2x 1.png"), linear-gradient(237.1deg, #24CCFA 11.16%, #3C7FD4 89.18%);
+  background-image: url("../img/contacts_bg.png"), linear-gradient(237.1deg, #24CCFA 11.16%, #3C7FD4 89.18%);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
@@ -529,6 +528,9 @@ header .lSSlideOuter .lSPager.lSpg {
   }
   #whatwedo .project_content {
     align-items: center;
+  }
+  #whatwedo .project_content .img_trade img {
+    width: min(100%, 630px);
   }
   #whatwedo .project_content .description {
     padding-top: 0;
