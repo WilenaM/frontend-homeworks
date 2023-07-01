@@ -36,7 +36,7 @@ a {
   border-radius: 50%;
 }
 
-button {
+.more_details {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -48,7 +48,7 @@ button {
   background-color: white;
   margin-bottom: 60px;
 }
-button:hover {
+.more_details:hover {
   filter: invert(1);
 }
 
@@ -61,6 +61,43 @@ header .header_wrap {
   top: 53px;
   width: 100%;
 }
+header .header_wrap #nambugrer_menu {
+  position: absolute;
+  display: none;
+  width: 100%;
+  top: -53px;
+  padding-top: 140px;
+  padding-bottom: 40px;
+  background: linear-gradient(207deg, #7E5AFF 0%, #55B7FF 100%);
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  z-index: -1;
+}
+header .header_wrap #nambugrer_menu .site_nav {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+}
+header .header_wrap #nambugrer_menu .site_nav a {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: white;
+  display: block;
+  padding: 10px, 0;
+  width: 100vw;
+  text-align: center;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+}
+header .header_wrap #nambugrer_menu .site_nav a:hover {
+  color: #24CCFA;
+  border-top: 1px solid #88c2ec;
+  border-bottom: 1px solid #88c2ec;
+}
 header .header_wrap.fixed {
   position: fixed;
   top: 0;
@@ -72,6 +109,7 @@ header .heading {
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  position: relative;
 }
 header .heading nav {
   display: flex;
@@ -107,6 +145,13 @@ header .heading nav a {
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
+}
+header .heading .hamb-wrapper {
+  position: absolute;
+  display: none;
+  right: 0;
+  top: 0;
+  height: 100%;
 }
 header #lightSlider li {
   background-image: url("../img/Mask Group.png"), linear-gradient(243.43deg, #7E5AFF 16.9%, #55B7FF 83.27%);
@@ -233,6 +278,13 @@ header .scroll_whatwedo {
   display: block;
   font-style: italic;
   color: black;
+}
+#whatwedo .project_content .description .location a {
+  color: #000;
+}
+#whatwedo .project_content .description .location i {
+  color: #2C4058;
+  margin-right: 10px;
 }
 
 #last_news {
@@ -392,8 +444,7 @@ header .scroll_whatwedo {
   background-image: url("../img/cityforform.png");
   background-position: bottom;
   background-repeat: no-repeat;
-  width: min(90%, 770px);
-  height: 450px;
+  width: min(100vw, 770px);
   bottom: -150px;
   left: 50%;
   z-index: 1001;
@@ -429,6 +480,17 @@ header .scroll_whatwedo {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+#contacts_map .contacts_getin_touch .dlya_flexa .contact_info a {
+  color: #000;
+}
+#contacts_map .contacts_getin_touch .dlya_flexa .contact_info i {
+  color: #7E5AFF;
+  margin-right: 10px;
 }
 #contacts_map .contacts_getin_touch .dlya_flexa form {
   display: flex;
@@ -476,7 +538,6 @@ footer .container_footer {
 footer .footer_flex {
   display: flex;
   justify-content: space-between;
-  gap: 369px;
   margin-bottom: 41px;
 }
 footer p {
@@ -546,7 +607,29 @@ header .lSSlideOuter .lSPager.lSpg {
     width: min(90%, 770px);
   }
 }
+@keyframes rotateMenu {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  70% {
+    transform: rotateX(-30deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
 @media screen and (max-width: 970px) {
+  header #nambugrer_menu.is-active {
+    display: flex;
+    animation: rotateMenu 400ms ease-in-out forwards;
+    transform-origin: top center;
+  }
+  header .heading nav {
+    display: none;
+  }
+  header .heading .hamb-wrapper {
+    display: flex;
+  }
   header #lightSlider h2 {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
@@ -560,7 +643,7 @@ header .lSSlideOuter .lSPager.lSpg {
     line-height: 18px;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 770px) {
   #last_news .container {
     width: min(90%, 370px);
   }
@@ -576,5 +659,25 @@ header .lSSlideOuter .lSPager.lSpg {
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
+  }
+
+  #contacts_map .contacts_getin_touch .dlya_flexa {
+    grid-template-columns: 1fr;
+  }
+  #contacts_map .contacts_getin_touch .dlya_flexa .contact_info {
+    text-align: center;
+  }
+  #contacts_map .contacts_getin_touch .dlya_flexa form button {
+    align-self: center;
+  }
+}
+@media screen and (max-width: 520px) {
+  footer .footer_flex {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  #contacts_map .contacts_getin_touch {
+    padding: 60px 10px;
   }
 }

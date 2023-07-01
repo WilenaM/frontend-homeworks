@@ -45,7 +45,7 @@ $(document).ready(function () {
         verticalHeight: 600
       }
     }, {
-      breakpoint: 686,
+      breakpoint: 771,
       settings: {
         verticalHeight: 400
       }
@@ -86,7 +86,7 @@ $(document).ready(function () {
           slideMove: 1
         }
       }, {
-        breakpoint: 686,
+        breakpoint: 771,
         settings: {
           item: 1
         }
@@ -112,4 +112,14 @@ $(document).ready(function () {
   $('.site_nav a').click(function (event) {
     slowScroll($(event.target).attr('href'));
   });
+});
+
+function toggleMenu() {
+  document.querySelector('#hamb_btn').classList.toggle('is-active');
+  document.querySelector('#nambugrer_menu').classList.toggle('is-active');
+}
+
+document.querySelector('#hamb_btn').addEventListener('click', toggleMenu);
+document.querySelectorAll('#nambugrer_menu .site_nav a').forEach(function (link) {
+  link.addEventListener('click', toggleMenu);
 });
