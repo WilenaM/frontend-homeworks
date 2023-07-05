@@ -37,3 +37,36 @@ function updateCircle(event) {
     }
 }
 document.querySelector('#up_circle').addEventListener('submit', updateCircle);
+
+let marker;
+
+function showMarkerInfo() {
+    document.querySelector('#name_color').value = marker.color;
+    document.querySelector('#balance').value = marker.paintAmount;
+
+}
+
+function creteMarker(event) {
+    event.preventDefault();
+    const colorCssEl = document.querySelector('#new_color');
+    const colorCss = colorCssEl.value;
+    colorCssEl.value ='';
+    const vidsotkuEl = document.querySelector('#vidsotku');
+    const vidsotku = vidsotkuEl.value;
+    vidsotkuEl.value = '';
+
+    marker = new Marker(colorCss, vidsotku);
+    showMarkerInfo();
+}
+
+document.querySelector('#new_marker').addEventListener('submit', creteMarker);
+
+function writeText(event) {
+    event.preventDefault();
+    const textArea = document.querySelector('#print_text').value;
+    document.querySelector('#result').innerHTML += marker.printText(textArea);
+    showMarkerInfo();
+}
+
+document.querySelector('#balance_color').addEventListener('submit', writeText);
+
