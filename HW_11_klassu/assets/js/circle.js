@@ -24,4 +24,4 @@ class Circle {
         return Math.PI * this.diameter;
     }
 }
-
+ export default Circle;

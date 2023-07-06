@@ -1,12 +1,15 @@
+import Circle from "./circle.js";
+import FillMarker from "./fillMarker.js";
+
 let circle;
 
 function createCircle(event) {
     event.preventDefault();
-    const inputRadius =  document.querySelector('#radius');
+    const inputRadius = document.querySelector('#radius');
     const radius = inputRadius.value;
     inputRadius.value = '';
-    
-    if (radius>0) {
+
+    if (radius > 0) {
         circle = new Circle(radius);
         renderCircle();
     } else {
@@ -29,7 +32,7 @@ function updateCircle(event) {
     const r = newRadius.value;
     newRadius.value = '';
 
-    if (r>0) {
+    if (r > 0) {
         circle.radius = r;
         renderCircle();
     } else {
@@ -37,6 +40,8 @@ function updateCircle(event) {
     }
 }
 document.querySelector('#up_circle').addEventListener('submit', updateCircle);
+
+
 
 let marker;
 
@@ -50,12 +55,12 @@ function creteMarker(event) {
     event.preventDefault();
     const colorCssEl = document.querySelector('#new_color');
     const colorCss = colorCssEl.value;
-    colorCssEl.value ='';
+    colorCssEl.value = '';
     const vidsotkuEl = document.querySelector('#vidsotku');
-    const vidsotku = vidsotkuEl.value;
+    const vidsotku = +vidsotkuEl.value;
     vidsotkuEl.value = '';
 
-    marker = new Marker(colorCss, vidsotku);
+    marker = new FillMarker(colorCss, vidsotku);
     showMarkerInfo();
 }
 
@@ -70,3 +75,13 @@ function writeText(event) {
 
 document.querySelector('#balance_color').addEventListener('submit', writeText);
 
+function fillMarker(event) {
+    event.preventDefault();
+    const amountEl = document.querySelector('#marker_fill_amount');
+    const amount = +amountEl.value;
+    amountEl.value = '';
+    marker.fill(amount);
+    showMarkerInfo();
+}
+
+document.querySelector('#marker_fill').addEventListener('submit', fillMarker)

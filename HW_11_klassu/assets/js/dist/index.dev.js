@@ -1,5 +1,11 @@
 "use strict";
 
+var _circle = _interopRequireDefault(require("./circle.js"));
+
+var _fillMarker = _interopRequireDefault(require("./fillMarker.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
 var circle;
 
 function createCircle(event) {
@@ -9,7 +15,7 @@ function createCircle(event) {
   inputRadius.value = '';
 
   if (radius > 0) {
-    circle = new Circle(radius);
+    circle = new _circle["default"](radius);
     renderCircle();
   } else {
     alert('Enter valid radius');
@@ -53,9 +59,9 @@ function creteMarker(event) {
   var colorCss = colorCssEl.value;
   colorCssEl.value = '';
   var vidsotkuEl = document.querySelector('#vidsotku');
-  var vidsotku = vidsotkuEl.value;
+  var vidsotku = +vidsotkuEl.value;
   vidsotkuEl.value = '';
-  marker = new Marker(colorCss, vidsotku);
+  marker = new _fillMarker["default"](colorCss, vidsotku);
   showMarkerInfo();
 }
 
@@ -69,3 +75,14 @@ function writeText(event) {
 }
 
 document.querySelector('#balance_color').addEventListener('submit', writeText);
+
+function fillMarker(event) {
+  event.preventDefault();
+  var amountEl = document.querySelector('#marker_fill_amount');
+  var amount = +amountEl.value;
+  amountEl.value = '';
+  marker.fill(amount);
+  showMarkerInfo();
+}
+
+document.querySelector('#marker_fill').addEventListener('submit', fillMarker);
