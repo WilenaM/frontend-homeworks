@@ -1,5 +1,7 @@
 import Circle from "./circle.js";
 import FillMarker from "./fillMarker.js";
+import Employee from "./employee.js";
+import EmpTable from "./emptable.js";
 
 let circle;
 
@@ -85,3 +87,19 @@ function fillMarker(event) {
 }
 
 document.querySelector('#marker_fill').addEventListener('submit', fillMarker)
+
+
+const employees = [
+        new Employee('John', 'Doe', 'Middle Front-end', 3000, 'Beetroot'),
+        new Employee('Joan', 'Doe', 'Project Manager', 2500, 'Beetroot'),
+        new Employee('Brian', 'Smith', 'Senior Back-end', 5500, 'Beetroot'),
+        new Employee('Bob', 'Jons', 'Middle Back-end', 3500, 'Shopping Cart'),
+        new Employee('Alan', 'Black', 'Senior Front-end', 5000, 'Shopping Cart'),
+        new Employee('William', 'Green', 'Senior Back-end', 5300, 'Shopping Cart'),
+        new Employee('Jennifer', 'White', 'Project Manager', 4000, 'Shopping Cart'),
+        new Employee('Jessica', 'Potter', 'Middle QA Engineer', 3000, 'Shopping Cart')
+];
+
+const empTable = new EmpTable(employees);
+
+document.querySelector('#forEmployees').prepend(empTable.getHtml())

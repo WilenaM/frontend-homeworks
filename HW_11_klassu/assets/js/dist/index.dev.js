@@ -4,6 +4,10 @@ var _circle = _interopRequireDefault(require("./circle.js"));
 
 var _fillMarker = _interopRequireDefault(require("./fillMarker.js"));
 
+var _employee = _interopRequireDefault(require("./employee.js"));
+
+var _emptable = _interopRequireDefault(require("./emptable.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var circle;
@@ -86,3 +90,6 @@ function fillMarker(event) {
 }
 
 document.querySelector('#marker_fill').addEventListener('submit', fillMarker);
+var employees = [new _employee["default"]('John', 'Doe', 'Middle Front-end', 3000, 'Beetroot'), new _employee["default"]('Joan', 'Doe', 'Project Manager', 2500, 'Beetroot'), new _employee["default"]('Brian', 'Smith', 'Senior Back-end', 5500, 'Beetroot'), new _employee["default"]('Bob', 'Jons', 'Middle Back-end', 3500, 'Shopping Cart'), new _employee["default"]('Alan', 'Black', 'Senior Front-end', 5000, 'Shopping Cart'), new _employee["default"]('William', 'Green', 'Senior Back-end', 5300, 'Shopping Cart'), new _employee["default"]('Jennifer', 'White', 'Project Manager', 4000, 'Shopping Cart'), new _employee["default"]('Jessica', 'Potter', 'Middle QA Engineer', 3000, 'Shopping Cart')];
+var empTable = new _emptable["default"](employees);
+document.querySelector('#forEmployees').prepend(empTable.getHtml());
